@@ -1,0 +1,12 @@
+server:
+  port: 8044
+
+---
+
+spring:
+  profiles: test
+
+log:
+  mode: test
+  level: INFO
+  dir: ~/kaleido/aron/logs
