@@ -138,7 +138,7 @@
         <level value="INFO"/>
     </logger>
 
-    <logger name="com.tauros.kaleido.aron.dao">
+    <logger name="com.tauros.kaleido.aron.dal">
         <level value="DEBUG"/>
         <appender-ref ref="SQL_ASYNC"/>
     </logger>

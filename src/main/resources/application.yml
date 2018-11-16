@@ -5,6 +5,11 @@ server:
 
 spring:
   profiles: test
+  redis:
+    host: 47.97.198.182
+    port: 16379
+    password: tauros@fitness
+    timeout: 60000
 
 log:
   mode: test
