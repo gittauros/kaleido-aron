@@ -18,7 +18,9 @@ public class RedisRepository {
     @Resource
     private RedisTemplate redisTemplate;
 
-    private static class Sample implements Serializable {
+    public static class Sample implements Serializable {
+
+        private static final long serialVersionUID = -3435492383848024694L;
 
         static class InstanceHolder {
             static Sample INSTANCE = new Sample();
