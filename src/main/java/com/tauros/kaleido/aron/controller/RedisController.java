@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import java.io.IOException;
 
 /**
  * @author zhy
@@ -22,7 +23,7 @@ public class RedisController {
 
     @RequestMapping("putTestObject")
     @ResponseBody
-    public String putTestObject() {
+    public String putTestObject() throws IOException {
         redisRepository.putTestObj();
         return "success\n";
     }
