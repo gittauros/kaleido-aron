@@ -23,14 +23,24 @@ public class RedisController {
 
     @RequestMapping("putTestObject")
     @ResponseBody
-    public String putTestObject() throws IOException {
-        redisRepository.putTestObj();
-        return "success\n";
+    public String putTestObject() {
+        try {
+            redisRepository.putTestObj();
+            return "success\n";
+        } catch (Exception e) {
+            log.error("putTestObject fail", e);
+            return "fail\n";
+        }
     }
 
     @RequestMapping("getTestObject")
     @ResponseBody
     public Object getTestObject() {
-        return redisRepository.getTestObject();
+        try {
+            return redisRepository.getTestObject();
+        } catch (Exception e) {
+            log.error("getTestObject fail", e);
+            return "fail\n";
+        }
     }
 }
