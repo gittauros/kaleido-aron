@@ -9,19 +9,27 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.annotation.Resource;
 
 /**
- * Created by zhy on 2018/10/27.
+ * @author zhy
+ * @date 2019/5/14
  */
 @Controller
+@RequestMapping("redis")
 @Slf4j
-public class IndexController {
+public class RedisController {
 
     @Resource
     private RedisRepository redisRepository;
 
-    @RequestMapping(value = {"/", "/index", "/home"})
+    @RequestMapping("putTestObject")
     @ResponseBody
-    public String index() {
-        return "kaleido-aron hello!\n";
+    public String putTestObject() {
+        redisRepository.putTestObj();
+        return "success\n";
     }
 
+    @RequestMapping("getTestObject")
+    @ResponseBody
+    public Object getTestObject() {
+        return redisRepository.getTestObject();
+    }
 }
