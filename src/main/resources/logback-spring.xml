@@ -25,7 +25,7 @@
         <file>${log.dir}/aron.log</file>
         <!-- 可让每天产生一个日志文件，最多 30 个，自动回滚 -->
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${log.dir}/meeting-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <fileNamePattern>${log.dir}/aron-%d{yyyy-MM-dd}.log</fileNamePattern>
             <maxHistory>30</maxHistory>
         </rollingPolicy>
         <encoder charset="UTF-8"> <!-- encoder 可以指定字符集，对于中文输出有意义 -->

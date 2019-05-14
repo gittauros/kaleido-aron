@@ -14,4 +14,8 @@ public class RedisRepository {
 
     @Resource
     private RedisTemplate redisTemplate;
+
+//    public void c() {
+//        redisTemplate.
+//    }
 }
