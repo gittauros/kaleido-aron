@@ -21,7 +21,7 @@ public class RedisController {
     @Resource
     private RedisRepository redisRepository;
 
-    @RequestMapping("putTestObject")
+    @RequestMapping("/putTestObject")
     @ResponseBody
     public String putTestObject() {
         try {
@@ -33,7 +33,7 @@ public class RedisController {
         }
     }
 
-    @RequestMapping("getTestObject")
+    @RequestMapping("/getTestObject")
     @ResponseBody
     public Object getTestObject() {
         try {
