@@ -6,6 +6,7 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import java.io.IOException;
@@ -14,7 +15,7 @@ import java.io.IOException;
  * @author zhy
  * @date 2019/5/14
  */
-@Controller
+@RestController
 @RequestMapping("redis")
 @Slf4j
 public class RedisController {
@@ -23,7 +24,6 @@ public class RedisController {
     private RedisRepository redisRepository;
 
     @RequestMapping("putTestObject")
-    @ResponseBody
     public String putTestObject() {
         try {
             redisRepository.putTestObj();
@@ -35,13 +35,23 @@ public class RedisController {
     }
 
     @RequestMapping(value = "getTestObject")
-    @ResponseBody
-    public RedisRepository.Sample getTestObject() {
+    public Object getTestObject() {
         try {
-            return redisRepository.getTestObject();
+            Object obj = redisRepository.getTestObject();
+            return obj;
         } catch (Exception e) {
             log.error("getTestObject fail", e);
             return "fail\n";
         }
+    }
+
+    @RequestMapping(value = "testLong")
+    public Long testLong() {
+        return 1L;
+    }
+
+    @RequestMapping(value = "testLongC")
+    public long testLongC() {
+        return 1L;
     }
 }
