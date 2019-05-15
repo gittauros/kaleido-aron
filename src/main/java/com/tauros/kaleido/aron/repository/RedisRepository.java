@@ -39,7 +39,7 @@ public class RedisRepository {
         redisTemplate.opsForValue().set("testObj", Sample.InstanceHolder.INSTANCE);
     }
 
-    public Object getTestObject() {
-        return redisTemplate.opsForValue().get("testObj");
+    public Sample getTestObject() {
+        return (Sample) redisTemplate.opsForValue().get("testObj");
     }
 }

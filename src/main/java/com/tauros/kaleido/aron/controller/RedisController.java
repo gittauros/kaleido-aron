@@ -2,6 +2,7 @@ package com.tauros.kaleido.aron.controller;
 
 import com.tauros.kaleido.aron.repository.RedisRepository;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -33,9 +34,9 @@ public class RedisController {
         }
     }
 
-    @RequestMapping("getTestObject")
+    @RequestMapping(value = "getTestObject")
     @ResponseBody
-    public Object getTestObject() {
+    public RedisRepository.Sample getTestObject() {
         try {
             return redisRepository.getTestObject();
         } catch (Exception e) {
