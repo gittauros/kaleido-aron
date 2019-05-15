@@ -18,7 +18,7 @@ import java.util.Random;
 public class RedisRepository {
 
     @Resource
-    private RedisTemplate redisTemplate;
+    private RedisTemplate<String, Object> redisTemplate;
 
     @Data
     public static class Sample implements Serializable {
