@@ -1,5 +1,8 @@
 server:
   port: 8044
+spring:
+  application:
+    name: kaleido-aron
 
 ---
 
@@ -10,6 +13,10 @@ spring:
     port: 16379
     password: tauros@fitness
     timeout: 60000
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.97.198.182:8848
 
 log:
   mode: test
@@ -24,6 +31,10 @@ spring:
     port: 16379
     password: tauros@fitness
     timeout: 60000
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.97.198.182:8848
 
 log:
   mode: prd
