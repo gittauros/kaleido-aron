@@ -49,7 +49,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
         return characterEncodingFilter;
     }
 
-
     @Override
     public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
         converters.add(stringHttpMessageConverter());
@@ -57,31 +56,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
         converters.add(mappingJackson2HttpMessageConverter());
         converters.add(mappingJackson2XmlHttpMessageConverter());
     }
-
-//    @Bean
-//    public FastJsonHttpMessageConverter fastJsonHttpMessageConverter() {
-//        FastJsonHttpMessageConverter fastJsonHttpMessageConverter = new FastJsonHttpMessageConverter();
-//        List<MediaType> supportedMediaTypes = new ArrayList<>();
-//        supportedMediaTypes.add(MediaType.APPLICATION_JSON);
-//        supportedMediaTypes.add(MediaType.APPLICATION_JSON_UTF8);
-//        supportedMediaTypes.add(MediaType.TEXT_HTML);
-//        fastJsonHttpMessageConverter.setSupportedMediaTypes(supportedMediaTypes);
-//        fastJsonHttpMessageConverter.setFastJsonConfig(fastJsonConfig());
-//        return fastJsonHttpMessageConverter;
-//    }
-//
-//    @Bean
-//    public FastJsonConfig fastJsonConfig() {
-//        FastJsonConfig fastJsonConfig = new FastJsonConfig();
-//        fastJsonConfig.setDateFormat("yyyy-MM-dd HH:mm:ss");
-//        SerializeConfig serializeConfig = new SerializeConfig();
-//        serializeConfig.put(Long.class, ToStringSerializer.instance);
-//        serializeConfig.put(Double.class, ToStringSerializer.instance);
-//        serializeConfig.put(long.class, ToStringSerializer.instance);
-//        serializeConfig.put(double.class, ToStringSerializer.instance);
-//        fastJsonConfig.setSerializeConfig(serializeConfig);
-//        return fastJsonConfig;
-//    }
 
     @Bean
     public MappingJackson2XmlHttpMessageConverter mappingJackson2XmlHttpMessageConverter() {
@@ -117,6 +91,31 @@ public class WebMvcConfig implements WebMvcConfigurer {
         objectMapper.registerModule(simpleModule);
         return objectMapper;
     }
+
+//    @Bean
+//    public FastJsonHttpMessageConverter fastJsonHttpMessageConverter() {
+//        FastJsonHttpMessageConverter fastJsonHttpMessageConverter = new FastJsonHttpMessageConverter();
+//        List<MediaType> supportedMediaTypes = new ArrayList<>();
+//        supportedMediaTypes.add(MediaType.APPLICATION_JSON);
+//        supportedMediaTypes.add(MediaType.APPLICATION_JSON_UTF8);
+//        supportedMediaTypes.add(MediaType.TEXT_HTML);
+//        fastJsonHttpMessageConverter.setSupportedMediaTypes(supportedMediaTypes);
+//        fastJsonHttpMessageConverter.setFastJsonConfig(fastJsonConfig());
+//        return fastJsonHttpMessageConverter;
+//    }
+//
+//    @Bean
+//    public FastJsonConfig fastJsonConfig() {
+//        FastJsonConfig fastJsonConfig = new FastJsonConfig();
+//        fastJsonConfig.setDateFormat("yyyy-MM-dd HH:mm:ss");
+//        SerializeConfig serializeConfig = new SerializeConfig();
+//        serializeConfig.put(Long.class, ToStringSerializer.instance);
+//        serializeConfig.put(Double.class, ToStringSerializer.instance);
+//        serializeConfig.put(long.class, ToStringSerializer.instance);
+//        serializeConfig.put(double.class, ToStringSerializer.instance);
+//        fastJsonConfig.setSerializeConfig(serializeConfig);
+//        return fastJsonConfig;
+//    }
 }
 
 

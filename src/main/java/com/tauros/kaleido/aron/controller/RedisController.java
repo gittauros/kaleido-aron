@@ -16,14 +16,14 @@ import java.io.IOException;
  * @date 2019/5/14
  */
 @RestController
-@RequestMapping("redis")
+@RequestMapping("/redis")
 @Slf4j
 public class RedisController {
 
     @Resource
     private RedisRepository redisRepository;
 
-    @RequestMapping("putTestObject")
+    @RequestMapping("/putTestObject")
     public String putTestObject() {
         try {
             redisRepository.putTestObj();
@@ -34,7 +34,7 @@ public class RedisController {
         }
     }
 
-    @RequestMapping(value = "getTestObject")
+    @RequestMapping(value = "/getTestObject")
     public Object getTestObject() {
         try {
             Object obj = redisRepository.getTestObject();
@@ -43,15 +43,5 @@ public class RedisController {
             log.error("getTestObject fail", e);
             return "fail\n";
         }
-    }
-
-    @RequestMapping(value = "testLong")
-    public Long testLong() {
-        return 1L;
-    }
-
-    @RequestMapping(value = "testLongC")
-    public long testLongC() {
-        return 1L;
     }
 }
