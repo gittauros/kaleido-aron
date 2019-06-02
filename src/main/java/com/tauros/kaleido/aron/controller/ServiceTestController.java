@@ -17,11 +17,13 @@ public class ServiceTestController {
 
     @RequestMapping("/testPut")
     public String testPut() {
+        log.info("testPut visit this");
         return aronService.putRedisObject();
     }
 
     @RequestMapping("/testGet")
     public Object testGet() {
+        log.info("testGet visit this");
         return aronService.getRedisObject();
     }
 
