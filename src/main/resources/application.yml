@@ -1,8 +1,13 @@
 server:
   port: 8044
+
 spring:
   application:
     name: kaleido-aron
+
+feign:
+  httpclient:
+    enable: true
 
 ---
 
