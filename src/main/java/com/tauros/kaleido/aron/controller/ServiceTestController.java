@@ -2,6 +2,7 @@ package com.tauros.kaleido.aron.controller;
 
 import com.tauros.kaleido.aron.service.AronService;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,7 +13,7 @@ import javax.annotation.Resource;
 @Slf4j
 public class ServiceTestController {
 
-    @Resource
+    @Reference
     private AronService aronService;
 
     @RequestMapping("/testPut")

@@ -28,6 +28,17 @@ log:
   level: INFO
   dir: ~/kaleido/aron/logs
 
+dubbo:
+  application:
+    name: kaleido-aron
+  registry:
+    address: nacos://127.0.0.1:8848
+  protocol:
+    name: dubbo
+    port: 20880
+  consumer:
+    timeout: 3000
+
 ---
 spring:
   profiles: prd
