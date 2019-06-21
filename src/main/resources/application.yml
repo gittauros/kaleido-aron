@@ -5,14 +5,14 @@ spring:
   application:
     name: kaleido-aron
 
-feign:
-  httpclient:
-    enable: true
+#feign:
+#  httpclient:
+#    enable: true
 
 ---
 
 spring:
-  profiles: test
+  profiles: dev
   redis:
     host: 47.97.198.182
     port: 16379
@@ -22,6 +22,36 @@ spring:
     nacos:
       discovery:
         server-addr: 47.97.198.182:8848
+
+log:
+  mode: test
+  level: INFO
+  dir: ~/kaleido/aron/logs
+
+dubbo:
+  application:
+    name: kaleido-aron
+  registry:
+    address: nacos://47.97.198.182:8848
+  protocol:
+    name: dubbo
+    port: 20880
+  consumer:
+    timeout: 3000
+
+---
+
+spring:
+  profiles: test
+  redis:
+    host: 127.0.0.1
+    port: 16379
+    password: tauros@fitness
+    timeout: 60000
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
 
 log:
   mode: test
