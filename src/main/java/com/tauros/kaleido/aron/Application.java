@@ -14,6 +14,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @SpringBootApplication
 @EnableAspectJAutoProxy
 @EnableDiscoveryClient
+@EnableDubbo(scanBasePackages = "com.tauros.kaleido.aron")
 @EnableCaching
 public class Application {
 

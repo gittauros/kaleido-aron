@@ -51,7 +51,7 @@ spring:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
-        ip: 47.97.198.182
+        ip: 127.0.0.1
 
 log:
   mode: test
@@ -62,14 +62,12 @@ dubbo:
   application:
     name: kaleido-aron
   registry:
-    protocol: nacos
     address: nacos://127.0.0.1:8848
   protocol:
-    host: 47.97.198.182
     name: dubbo
     port: 20880
-  consumer:
-    timeout: 3000
+#  consumer:
+#    timeout: 3000
 
 #---
 #spring:
