@@ -64,6 +64,9 @@ dubbo:
     host: 47.97.198.182
     name: dubbo
     port: 20880
+  provider:
+    host: 47.97.198.182
+    port: 20880
   consumer:
     timeout: 3000
 
