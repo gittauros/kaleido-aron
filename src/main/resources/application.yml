@@ -18,7 +18,7 @@ spring:
     nacos:
       discovery:
         server-addr: 47.97.198.182:8848
-#        ip: 47.97.198.182
+        ip: 127.0.0.1
 
 log:
   mode: test
