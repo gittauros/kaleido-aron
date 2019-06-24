@@ -12,7 +12,7 @@ import java.io.IOException;
  * @author zhy
  * @date 2019/6/21
  */
-@Service(version = "1.0.0")
+@Service(version = "1.0.0", path = "aronService")
 @Slf4j
 public class AronServiceImpl implements AronService {
 

@@ -13,7 +13,7 @@ import javax.annotation.Resource;
 @Slf4j
 public class ServiceTestController {
 
-    @Reference(url = "kaleido-aron", lazy = true)
+    @Reference(url = "kaleido-aron/aronService", lazy = true)
     private AronService aronService;
 
     @RequestMapping("/testPut")
