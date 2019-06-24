@@ -29,7 +29,6 @@ dubbo:
   application:
     name: kaleido-aron
   registry:
-    protocol: nacos
     address: nacos://47.97.198.182:8848
   protocol:
     host: 127.0.0.1
@@ -64,6 +63,7 @@ dubbo:
   registry:
     address: nacos://127.0.0.1:8848
   protocol:
+    host: 47.97.198.182
     name: dubbo
     port: 20880
 #  consumer:
