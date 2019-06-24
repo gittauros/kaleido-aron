@@ -1,9 +1,9 @@
 server:
   port: 8044
-
-spring:
-  application:
-    name: kaleido-aron
+#
+#spring:
+#  application:
+#    name: kaleido-aron
 
 ---
 
@@ -29,6 +29,7 @@ dubbo:
   application:
     name: kaleido-aron
   registry:
+    protocol: nacos
     address: nacos://47.97.198.182:8848
   protocol:
     host: 127.0.0.1
@@ -61,6 +62,7 @@ dubbo:
   application:
     name: kaleido-aron
   registry:
+    protocol: nacos
     address: nacos://127.0.0.1:8848
   protocol:
     host: 47.97.198.182
