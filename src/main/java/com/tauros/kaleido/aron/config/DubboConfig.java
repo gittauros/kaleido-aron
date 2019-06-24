@@ -8,6 +8,6 @@ import org.springframework.context.annotation.Configuration;
  * @date 2019/6/21
  */
 @Configuration
-@EnableDubbo(scanBasePackages = "com.tauros.kaleido.aron.service.impl")
+@EnableDubbo(scanBasePackages = "com.tauros.kaleido.aron")
 public class DubboConfig {
 }

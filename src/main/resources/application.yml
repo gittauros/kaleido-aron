@@ -1,9 +1,9 @@
 server:
   port: 8044
-#
-#spring:
-#  application:
-#    name: kaleido-aron
+
+spring:
+  application:
+    name: kaleido-aron
 
 ---
 
@@ -34,7 +34,7 @@ dubbo:
   protocol:
     host: 127.0.0.1
     name: dubbo
-#    port: 20880
+    port: 20880
   consumer:
     timeout: 3000
 
@@ -67,7 +67,7 @@ dubbo:
   protocol:
     host: 47.97.198.182
     name: dubbo
-#    port: 20880
+    port: 20880
   consumer:
     timeout: 3000
 
