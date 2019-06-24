@@ -18,6 +18,7 @@ spring:
     nacos:
       discovery:
         server-addr: 47.97.198.182:8848
+        ip: 47.97.198.182
 
 log:
   mode: test
@@ -29,7 +30,6 @@ dubbo:
     name: kaleido-aron
   registry:
     address: nacos://47.97.198.182:8848
-        ip: 47.97.198.182
   protocol:
     host: 127.0.0.1
     name: dubbo
@@ -53,7 +53,7 @@ spring:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
-        ip: 127.0.0.1
+        ip: 47.97.198.182
 
 log:
   mode: test
