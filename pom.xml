@@ -16,7 +16,7 @@
         <java.version>1.8</java.version>
         <java.encoding>UTF-8</java.encoding>
         <springboot.version>2.0.5.RELEASE</springboot.version>
-        <dubbo.version>2.7.1</dubbo.version>
+        <!--<dubbo.version>2.7.1</dubbo.version>-->
     </properties>
 
     <dependencyManagement>
@@ -192,11 +192,6 @@
         <!--</dependency>-->
 
 
-        <!-- https://mvnrepository.com/artifact/org.apache.dubbo/dubbo-spring-boot-starter -->
-        <dependency>
-            <groupId>org.apache.dubbo</groupId>
-            <artifactId>dubbo-spring-boot-starter</artifactId>
-        </dependency>
         <dependency>
             <groupId>org.apache.dubbo</groupId>
             <artifactId>dubbo</artifactId>
@@ -209,8 +204,9 @@
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.dubbo/dubbo-registry-nacos -->
         <dependency>
-            <groupId>com.alibaba</groupId>
+            <groupId>org.apache.dubbo</groupId>
             <artifactId>dubbo-registry-nacos</artifactId>
+            <version>2.7.1</version>
         </dependency>
 
 
