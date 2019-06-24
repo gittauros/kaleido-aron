@@ -19,7 +19,6 @@ spring:
       discovery:
         server-addr: 47.97.198.182:8848
 #        ip: 47.97.198.182
-        port: 20880
 
 log:
   mode: test
@@ -34,7 +33,7 @@ dubbo:
   protocol:
     host: 127.0.0.1
     name: dubbo
-    port: 20880
+#    port: 20880
   consumer:
     timeout: 3000
 
@@ -52,7 +51,6 @@ spring:
       discovery:
         server-addr: 127.0.0.1:8848
         ip: 47.97.198.182
-        port: 20880
 
 log:
   mode: test
@@ -67,7 +65,7 @@ dubbo:
   protocol:
     host: 47.97.198.182
     name: dubbo
-    port: 20880
+#    port: 20880
   consumer:
     timeout: 3000
 

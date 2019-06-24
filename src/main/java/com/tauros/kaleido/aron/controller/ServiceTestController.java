@@ -13,19 +13,19 @@ import javax.annotation.Resource;
 @Slf4j
 public class ServiceTestController {
 
-//    @Reference(lazy = true)
-//    private AronService aronService;
+    @Reference(url = "kaleido-aron", lazy = true)
+    private AronService aronService;
 
-//    @RequestMapping("/testPut")
-//    public String testPut() {
-//        log.info("testPut visit this");
-//        return aronService.putRedisObject();
-//    }
-//
-//    @RequestMapping("/testGet")
-//    public Object testGet() {
-//        log.info("testGet visit this");
-//        return aronService.getRedisObject();
-//    }
+    @RequestMapping("/testPut")
+    public String testPut() {
+        log.info("testPut visit this");
+        return aronService.putRedisObject();
+    }
+
+    @RequestMapping("/testGet")
+    public Object testGet() {
+        log.info("testGet visit this");
+        return aronService.getRedisObject();
+    }
 
 }
