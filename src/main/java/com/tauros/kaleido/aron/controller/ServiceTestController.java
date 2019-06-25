@@ -3,17 +3,19 @@ package com.tauros.kaleido.aron.controller;
 import com.tauros.kaleido.aron.service.AronService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.Reference;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 
+@Lazy
 @RestController
 @RequestMapping("/serviceTest")
 @Slf4j
 public class ServiceTestController {
 
-    @Reference(lazy = true, version = "1.0.0")
+    @Reference(version = "1.0.0")
     private AronService aronService;
 
     @RequestMapping("/testPut")
