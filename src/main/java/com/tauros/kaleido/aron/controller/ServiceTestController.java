@@ -13,7 +13,7 @@ import javax.annotation.Resource;
 @Slf4j
 public class ServiceTestController {
 
-    @Reference(lazy = true, version = "1.0.0")
+    @Reference(version = "${dubbo.registry.version}", group = "${dubbo.registry.group")
     private AronService aronService;
 
     @RequestMapping("/testPut")

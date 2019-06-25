@@ -14,11 +14,12 @@ spring:
     port: 16379
     password: tauros@fitness
     timeout: 60000
-#  cloud:
-#    nacos:
-#      discovery:
-#        server-addr: 47.97.198.182:8848
-#        ip: 127.0.0.1
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.97.198.182:8848
+        ip: 127.0.0.1
+        namespace: dev
 
 log:
   mode: test
@@ -30,6 +31,7 @@ dubbo:
     name: kaleido-aron
   registry:
     group: kaleido-aron
+    version: 1.0.0
     address: nacos://47.97.198.182:8848
   protocol:
     host: 127.0.0.1
@@ -52,6 +54,7 @@ spring:
       discovery:
         server-addr: 47.97.198.182:8848
         ip: 47.97.198.182
+        namespace: test
 
 log:
   mode: test
@@ -63,6 +66,7 @@ dubbo:
     name: kaleido-aron
   registry:
     group: kaleido-aron
+    version: 1.0.0
     address: nacos://47.97.198.182:8848
   protocol:
     host: 127.0.0.1
