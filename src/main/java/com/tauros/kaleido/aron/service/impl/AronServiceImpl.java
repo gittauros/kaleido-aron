@@ -21,6 +21,7 @@ public class AronServiceImpl implements AronService {
 
     @Override
     public String putRedisObject() {
+        log.info("call putRedisObject");
         try {
             redisRepository.putTestObj();
             return "success";
@@ -32,6 +33,7 @@ public class AronServiceImpl implements AronService {
 
     @Override
     public Object getRedisObject() {
+        log.info("call getRedisObject");
         return redisRepository.getTestObject();
     }
 }
