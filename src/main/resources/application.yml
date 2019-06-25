@@ -24,19 +24,19 @@ log:
   mode: test
   level: INFO
   dir: ~/kaleido/aron/logs
-
-dubbo:
-  application:
-    name: kaleido-aron
-  registry:
-    protocol: nacos
-    address: nacos://47.97.198.182:8848
-  protocol:
-    host: 127.0.0.1
-    name: dubbo
-    port: 20880
-  consumer:
-    timeout: 3000
+#
+#dubbo:
+#  application:
+#    name: kaleido-aron
+#  registry:
+#    protocol: nacos
+#    address: nacos://47.97.198.182:8848
+#  protocol:
+#    host: 127.0.0.1
+#    name: dubbo
+#    port: 20880
+#  consumer:
+#    timeout: 3000
 
 ---
 
@@ -58,15 +58,15 @@ log:
   level: INFO
   dir: /root/app/kaleido-aron/logs
 
-dubbo:
-  application:
-    name: kaleido-aron
-  registry:
-    protocol: nacos
-    address: nacos://47.97.198.182:8848
-  protocol:
-    host: 127.0.0.1
-    name: dubbo
-    port: 20880
-  consumer:
-    timeout: 3000
+#dubbo:
+#  application:
+#    name: kaleido-aron
+#  registry:
+#    protocol: nacos
+#    address: nacos://47.97.198.182:8848
+#  protocol:
+#    host: 127.0.0.1
+#    name: dubbo
+#    port: 20880
+#  consumer:
+#    timeout: 3000

@@ -14,18 +14,18 @@ import javax.annotation.Resource;
 public class ServiceTestController {
 
 //    @Reference(version = "1.0.0")
-//    private AronService aronService;
-//
-//    @RequestMapping("/testPut")
-//    public String testPut() {
-//        log.info("testPut visit this");
-//        return aronService.putRedisObject();
-//    }
-//
-//    @RequestMapping("/testGet")
-//    public Object testGet() {
-//        log.info("testGet visit this");
-//        return aronService.getRedisObject();
-//    }
+    private AronService aronService;
+
+    @RequestMapping("/testPut")
+    public String testPut() {
+        log.info("testPut visit this");
+        return aronService.putRedisObject();
+    }
+
+    @RequestMapping("/testGet")
+    public Object testGet() {
+        log.info("testGet visit this");
+        return aronService.getRedisObject();
+    }
 
 }
