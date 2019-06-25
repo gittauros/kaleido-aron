@@ -70,21 +70,3 @@ dubbo:
     port: 20880
   consumer:
     timeout: 3000
-
-#---
-#spring:
-#  profiles: prd
-#  redis:
-#    host: 172.16.123.31
-#    port: 16379
-#    password: tauros@fitness
-#    timeout: 60000
-#  cloud:
-#    nacos:
-#      discovery:
-#        server-addr: 47.97.198.182:8848
-#
-#log:
-#  mode: prd
-#  level: INFO
-#  dir: /root/app/kaleido-aron/logs
