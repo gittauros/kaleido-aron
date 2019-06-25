@@ -1,9 +1,9 @@
 server:
   port: 8044
 
-#spring:
-#  application:
-#    name: kaleido-aron
+spring:
+  application:
+    name: kaleido-aron
 
 ---
 
@@ -19,7 +19,6 @@ spring:
       discovery:
         server-addr: 47.97.198.182:8848
         ip: 127.0.0.1
-        namespace: dev
 
 log:
   mode: test
@@ -54,7 +53,6 @@ spring:
       discovery:
         server-addr: 47.97.198.182:8848
         ip: 47.97.198.182
-        namespace: test
 
 log:
   mode: test
