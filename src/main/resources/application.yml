@@ -1,9 +1,9 @@
-erver:
+server:
   port: 8044
 
-#spring:
-#  application:
-#    name: kaleido-aron
+spring:
+  application:
+    name: kaleido-aron
 
 ---
 
@@ -14,29 +14,28 @@ spring:
     port: 16379
     password: tauros@fitness
     timeout: 60000
-#  cloud:
-#    nacos:
-#      discovery:
-#        server-addr: 47.97.198.182:8848
-#        ip: 127.0.0.1
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.97.198.182:8848
+        ip: 127.0.0.1
 
 log:
   mode: test
   level: INFO
   dir: ~/kaleido/aron/logs
-#
-#dubbo:
-#  application:
-#    name: kaleido-aron
-#  registry:
-#    protocol: nacos
-#    address: nacos://47.97.198.182:8848
-#  protocol:
-#    host: 127.0.0.1
-#    name: dubbo
-#    port: 20880
-#  consumer:
-#    timeout: 3000
+
+dubbo:
+  application:
+    name: kaleido-aron
+  registry:
+    address: nacos://47.97.198.182:8848
+  protocol:
+    host: 127.0.0.1
+    name: dubbo
+    port: 20880
+  consumer:
+    timeout: 3000
 
 ---
 
@@ -47,26 +46,43 @@ spring:
     port: 16379
     password: tauros@fitness
     timeout: 60000
-#  cloud:
-#    nacos:
-#      discovery:
-#        server-addr: 47.97.198.182:8848
-#        ip: 47.97.198.182
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        ip: 127.0.0.1
 
 log:
   mode: test
   level: INFO
   dir: /root/app/kaleido-aron/logs
 
-#dubbo:
-#  application:
-#    name: kaleido-aron
-#  registry:
-#    protocol: nacos
-#    address: nacos://47.97.198.182:8848
-#  protocol:
-#    host: 127.0.0.1
-#    name: dubbo
-#    port: 20880
-#  consumer:
-#    timeout: 3000
+dubbo:
+  application:
+    name: kaleido-aron
+  registry:
+    address: nacos://127.0.0.1:8848
+  protocol:
+    host: 127.0.0.1
+    name: dubbo
+    port: 20880
+  consumer:
+    timeout: 3000
+
+#---
+#spring:
+#  profiles: prd
+#  redis:
+#    host: 172.16.123.31
+#    port: 16379
+#    password: tauros@fitness
+#    timeout: 60000
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: 47.97.198.182:8848
+#
+#log:
+#  mode: prd
+#  level: INFO
+#  dir: /root/app/kaleido-aron/logs
