@@ -49,7 +49,7 @@ dubbo:
   registry:
     address: nacos://47.97.198.182:8848
   protocol:
-    host: 47.97.198.182
+#    host: 47.97.198.182
     name: dubbo
     port: 20880
   consumer:
