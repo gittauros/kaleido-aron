@@ -47,11 +47,11 @@ spring:
     port: 16379
     password: tauros@fitness
     timeout: 60000
-#  cloud:
-#    nacos:
-#      discovery:
-#        server-addr: 47.97.198.182:8848
-#        ip: 47.97.198.182
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.97.198.182:8848
+        ip: 47.97.198.182
 
 log:
   mode: test
