@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 
-//@Lazy
+@Lazy
 @RestController
 @RequestMapping("/serviceTest")
 @Slf4j
