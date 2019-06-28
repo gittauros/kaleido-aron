@@ -19,6 +19,7 @@ spring:
       connect-string: 47.97.198.182:20101,47.97.198.182:20102,47.97.198.182:20103
       discovery:
         enabled: true
+        instanceHost: 127.0.0.1
 
 log:
   mode: test
@@ -43,7 +44,7 @@ log:
 spring:
   profiles: test
   redis:
-    host: 127.0.0.1
+    host: 47.97.198.182
     port: 16379
     password: tauros@fitness
     timeout: 60000
@@ -52,6 +53,7 @@ spring:
       connect-string: 47.97.198.182:20101,47.97.198.182:20102,47.97.198.182:20103
       discovery:
         enabled: true
+        instanceHost: 47.97.198.182
 
 log:
   mode: test
