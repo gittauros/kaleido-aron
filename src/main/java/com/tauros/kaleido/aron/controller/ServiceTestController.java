@@ -17,6 +17,7 @@ import javax.annotation.Resource;
 public class ServiceTestController {
 
 //    @Reference(lazy = true, version = "1.0.0")
+    @Resource
     private AronFeignService aronService;
 
     @RequestMapping("/testPut")
