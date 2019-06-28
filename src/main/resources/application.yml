@@ -19,7 +19,8 @@ spring:
       connect-string: 47.97.198.182:20101,47.97.198.182:20102,47.97.198.182:20103
       discovery:
         enabled: true
-        instanceHost: 127.0.0.1
+        instance-id: zhy-mac
+        instance-host: 127.0.0.1
 
 log:
   mode: test
@@ -53,7 +54,8 @@ spring:
       connect-string: 47.97.198.182:20101,47.97.198.182:20102,47.97.198.182:20103
       discovery:
         enabled: true
-        instanceHost: 47.97.198.182
+        instance-id: ecs-gyarados
+        instance-host: 47.97.198.182
 
 log:
   mode: test
