@@ -1,6 +1,10 @@
 server:
   port: 8044
 
+sprint:
+  application:
+    name: kaleido-aron
+
 ---
 
 spring:
@@ -10,24 +14,29 @@ spring:
     port: 16379
     password: tauros@fitness
     timeout: 60000
+  cloud:
+    zookeeper:
+      connect-string: 47.97.198.182:20101,47.97.198.182:20102,47.97.198.182:20103
+      discovery:
+        enabled: true
 
 log:
   mode: test
   level: INFO
   dir: ~/kaleido/aron/logs
 
-dubbo:
-  application:
-    name: kaleido-aron
-  registry:
-    address: zookeeper://47.97.198.182:20101
-    client: curator
-  protocol:
-    host: 127.0.0.1
-    name: dubbo
-    port: 20880
-  consumer:
-    timeout: 3000
+#dubbo:
+#  application:
+#    name: kaleido-aron
+#  registry:
+#    address: zookeeper://47.97.198.182:20101
+#    client: curator
+#  protocol:
+#    host: 127.0.0.1
+#    name: dubbo
+#    port: 20880
+#  consumer:
+#    timeout: 3000
 
 ---
 
@@ -38,21 +47,25 @@ spring:
     port: 16379
     password: tauros@fitness
     timeout: 60000
+  cloud:
+    zookeeper:
+      connect-string: 47.97.198.182:20101,47.97.198.182:20102,47.97.198.182:20103
+      discovery:
+        enabled: true
 
 log:
   mode: test
   level: INFO
   dir: /root/app/kaleido-aron/logs
 
-dubbo:
-  application:
-    name: kaleido-aron
-  registry:
-    address: zookeeper://47.97.198.182:20101
-    client: curator
-  protocol:
-#    host: 47.97.198.182
-    name: dubbo
-    port: 20880
-  consumer:
-    timeout: 3000
+#dubbo:
+#  application:
+#    name: kaleido-aron
+#  registry:
+#    address: zookeeper://47.97.198.182:20101
+#    client: curator
+#  protocol:
+#    name: dubbo
+#    port: 20880
+#  consumer:
+#    timeout: 3000

@@ -25,6 +25,7 @@ public class RedisController {
 
     @RequestMapping("/putTestObject")
     public String putTestObject() {
+        log.info("testPut visit this");
         try {
             redisRepository.putTestObj();
             return "success\n";
@@ -36,6 +37,7 @@ public class RedisController {
 
     @RequestMapping(value = "/getTestObject")
     public Object getTestObject() {
+        log.info("testGet visit this");
         try {
             Object obj = redisRepository.getTestObject();
             return obj;
