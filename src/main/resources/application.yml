@@ -20,7 +20,8 @@ dubbo:
   application:
     name: kaleido-aron
   registry:
-    address: nacos://47.97.198.182:8848
+    address: zookeeper://47.97.198.182:20101
+    client: curator
   protocol:
     host: 127.0.0.1
     name: dubbo
@@ -47,7 +48,8 @@ dubbo:
   application:
     name: kaleido-aron
   registry:
-    address: nacos://47.97.198.182:8848
+    address: zookeeper://47.97.198.182:20101
+    client: curator
   protocol:
 #    host: 47.97.198.182
     name: dubbo

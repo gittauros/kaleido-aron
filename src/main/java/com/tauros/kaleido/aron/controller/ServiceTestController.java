@@ -15,7 +15,7 @@ import javax.annotation.Resource;
 @Slf4j
 public class ServiceTestController {
 
-    @Reference(version = "1.0.0")
+    @Reference(lazy = true, version = "1.0.0")
     private AronService aronService;
 
     @RequestMapping("/testPut")
